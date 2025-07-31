@@ -338,4 +338,42 @@
             <div className="bg-black min-h-screen flex items-center justify-center font-sans p-4 relative overflow-hidden">
               {/* Background Logo Element */}
               <div
-                className="absol
+                className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                style={{
+                    transform: 'rotate(45deg)',
+                    opacity: 0.05
+                }}
+              >
+                <img
+                    src="https://cdn.prod.website-files.com/65f2989505d63045bb49388a/65f2989505d63045bb493a80_BB-B-Logo-White-400px-web.webp"
+                    alt=""
+                    style={{ width: '300px', height: 'auto' }}
+                />
+              </div>
+
+              {/* Main Content */}
+              <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 p-8 rounded-lg shadow-2xl w-full max-w-4xl z-10">
+                <img 
+                    src="https://cdn.prod.website-files.com/65f2989505d63045bb49388a/65f2989505d63045bb493ac9_0ada5c33b4fc13ca0473237e7f53bd98_BASSBOSS-Logo-Yellow-600px-web.webp" 
+                    alt="BASSBOSS Logo"
+                    className="h-12 mx-auto mb-2"
+                />
+                <p className="text-center text-gray-400 mb-8">MK3 System Recommender</p>
+                {renderStep()}
+                 <div className="mt-8">
+                    <div className="w-full bg-gray-700 rounded-full h-2.5">
+                        <div className="bg-yellow-400 h-2.5 rounded-full transition-all duration-500" style={{ width: `${(step / totalSteps) * 100}%` }}></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          );
+        };
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+</body>
+</html>
